@@ -19,7 +19,8 @@ textarea.addEventListener('keyup',(e)=>{
 function sendMessage(message){
     let msg={
         user:name,
-        message:message
+        message:message,
+        time:new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1")
     }
     //append
 
@@ -41,6 +42,7 @@ function appendMessage(msg,type){
     let markup = `
         <h4>${msg.user}</h4>
         <p>${msg.message}</p>
+        <span>${msg.time}</span>
     `
     mainDiv.innerHTML = markup
     messageArea.appendChild(mainDiv)

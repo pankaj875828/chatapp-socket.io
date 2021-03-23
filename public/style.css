@@ -80,3 +80,10 @@ textarea{
     color: #333;
     font-size: 14px;
 }
+
+.message span .incoming{
+    text-align: right;
+    font-size: 10px;
+    color: white;
+    bottom: 1px;
+}
